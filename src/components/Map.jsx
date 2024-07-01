@@ -6,7 +6,7 @@ const Map = () => {
 
   useEffect(() => {
     const mapApiKey = import.meta.env.VITE_MAP_API;
-    const location = "9.0409338,38.7282904"; 
+    const location = "9.037042,38.726790"; 
     setMapUrl(
       `https://www.google.com/maps/embed/v1/place?key=${mapApiKey}&q=${location}`
     );
