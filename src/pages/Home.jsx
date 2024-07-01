@@ -233,8 +233,8 @@ const Home = () => {
                 </ul>
               </div>{" "}
             </div>
-            <div className="overflow-x-auto p-6">
-              <table className="min-w-full border-collapse bg-white shadow-lg rounded-lg animate-fade-in">
+            <div className="overflow-x-auto p-6 bg-white rounded-[2rem] md:py-20 mt-4 md:mt-0 border flex justify-center  ">
+              <table className="min-w-full border-collapse  bg-white shadow-lg rounded-lg animate-fade-in">
                 <thead>
                   <tr className="bg-blue-500 text-white">
                     <th className="px-6 py-3 border-b-2 border-gray-300">
