@@ -47,6 +47,44 @@ const Home = () => {
     },
   ];
 
+    const workingHours = [
+      {
+        day: "Monday",
+        startTime: "2:00",
+        endTime: "11:30",
+      },
+      {
+        day: "Tuesday",
+        startTime: "2:00",
+        endTime: "11:30",
+      },
+      {
+        day: "Wednesday",
+        startTime: "2:00",
+        endTime: "11:30",
+      },
+      {
+        day: "Thursday",
+        startTime: "2:00",
+        endTime: "11:30",
+      },
+      {
+        day: "Friday",
+        startTime: "2:00",
+        endTime: "11:30",
+      },
+      {
+        day: "Saturday",
+        startTime: "2:00",
+        endTime: "8:00",
+      },
+      {
+        day: "Sunday",
+        startTime: "-",
+        endTime: "-",
+      },
+    ];
+
   return (
     <>
       <div id="home" className="py-10 overflow-x-hidden">
@@ -177,22 +215,53 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="pt-10 bg-white rounded-[2rem] md:py-20 mt-4 md:mt-0 border flex justify-center">
-            <div>
-              <h1 className="text-green-600 text-3xl capitalize px-5 md:px-0">
-                Full-Service Laboratory
-              </h1>
-              <br />
-              <ul>
-                {labratory.map((gen, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    {" "}
-                    <IoCheckmarkDoneOutline className="text-green-700" />{" "}
-                    {gen.value}
-                  </li>
-                ))}
-              </ul>
-            </div>{" "}
+          <div className="md:grid md:grid-cols-2 md:gap-4 flex flex-col gap-3">
+            <div className="pt-10 bg-white rounded-[2rem] md:py-20 mt-4 md:mt-0 border flex justify-center">
+              <div>
+                <h1 className="text-green-600 text-3xl capitalize px-5 md:px-0">
+                  Full-Service Laboratory
+                </h1>
+                <br />
+                <ul>
+                  {labratory.map((gen, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      {" "}
+                      <IoCheckmarkDoneOutline className="text-green-700" />{" "}
+                      {gen.value}
+                    </li>
+                  ))}
+                </ul>
+              </div>{" "}
+            </div>
+            <div className="overflow-x-auto p-6">
+              <table className="min-w-full border-collapse bg-white shadow-lg rounded-lg animate-fade-in">
+                <thead>
+                  <tr className="bg-blue-500 text-white">
+                    <th className="px-6 py-3 border-b-2 border-gray-300">
+                      Days
+                    </th>
+                    <th className="px-6 py-3 border-b-2 border-gray-300">
+                      Working Hours(Local Time)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {workingHours.map((hour, index) => (
+                    <tr
+                      key={index}
+                      className="bg-gray-100 even:bg-gray-200 hover:bg-gray-300"
+                    >
+                      <td className="px-6 py-4 border-b border-gray-300">
+                        {hour.day}
+                      </td>
+                      <td className="px-6 py-4 border-b border-gray-300">
+                        {hour.startTime} - {hour.endTime}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

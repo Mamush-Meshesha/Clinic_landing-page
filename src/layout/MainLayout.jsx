@@ -21,7 +21,7 @@ const MainLayout = () => {
   return (
     <div className="bg-[#ecf1f8] w-screen overflow-hidden">
       <header className="h-[90px] flex items-center  px-20  ">
-        <nav className="flex justify-between w-[100%] bg-[#ecf1f8] list-none text-2xl fixed md:mx-[5%] top-0 left-0 ">
+        <nav className="flex justify-between w-[100%] bg-[#ecf1f8] list-none text-2xl fixed lg:mx-[5%] top-0 left-0 ">
           <ul>
             <li className="flex gap-4 items-center">
               <img
@@ -103,10 +103,10 @@ const MainLayout = () => {
       <main>
         <Outlet />
       </main>
-      <footer className="bg-[#0b74fa] md:h-[35rem] h-full md:p-10 p-4 mt-4 md:mt-0  rounded-t-[2rem]  ">
+      <footer className="bg-[#0b74fa] lg:h-[35rem] md:h-[42rem] h-[45rem] md:p-10 p-4 mt-4 md:mt-0  rounded-t-[2rem]  ">
         <div className="md:grid md:grid-cols-2 md: gap10 relative ">
           <div className="md:w-[80%]">
-            <h1 className="font-fan md:text-6xl text-2xl text-center  md:leading-[80px] font-bold text-white">
+            <h1 className="font-fan lg:text-6xl text-2xl text-center md:text-5xl  lg:leading-[80px] font-bold text-white">
               Smart diagnosis for healthier tommorow!!!
             </h1>
           </div>
@@ -147,12 +147,12 @@ const MainLayout = () => {
               </a>
             </div>
           </div>
-          <div className="absolute right-0 ">
+          <div className="absolute right-0 md:ml-10 lg:ml-0 ">
             <Map />
           </div>
         </div>
 
-        <div className="pt-24">
+        <div className="pt-[500px] md:pt-24 ">
           <hr />
           <p>© 2024 DR. Abrham Menberu clinic</p>
         </div>

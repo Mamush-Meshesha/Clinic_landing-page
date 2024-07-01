@@ -13,11 +13,11 @@ const Map = () => {
   }, []);
 
   return (
-    <div className="container mx-auto pt-12 md:pt-20 ">
+    <div className="container mx-auto pt-12 md:pt-44 lg:pt-20">
       <h1>Find us here</h1>
       <div>
         <iframe
-          className="md:rounded-[1rem] rounded-lg w-[370px] md:w-[600px] h-[400px] "
+          className="md:rounded-[1rem] rounded-lg w-[370px] md:w-[280px] lg:w-[600px] h-[400px] md:h-[400px] "
           width="660"
           height="340"
           style={{ border: 0 }}
